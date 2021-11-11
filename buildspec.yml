@@ -18,6 +18,6 @@ phases:
     commands:
       - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 873827770697.dkr.ecr.eu-central-1.amazonaws.com
       - cd app
-      - docker build -t ecr-terragrunt-dev .
+      - docker build -t terragrunt-dev .
       - docker tag ecr-terragrunt-dev:latest 873827770697.dkr.ecr.eu-central-1.amazonaws.com/ecr-terragrunt-dev:latest
       - docker push 873827770697.dkr.ecr.eu-central-1.amazonaws.com/terragrunt-dev:latest

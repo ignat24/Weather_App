@@ -4,7 +4,7 @@ env:
   variables:
     CI: "true"
     REPOSITORY_REGION: "eu-west-2"
-    ENV: "dev"
+    ENV: "prod"
     APP: "weather"
     NAME_CONTAINER: "main"
 

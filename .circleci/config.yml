@@ -8,8 +8,8 @@ workflows:
 jobs:
   test:
     docker:
-      - image: cimg/node:14.13.0
+      - image: cimg/base:2020.01
     steps:
       - checkout
-      - run: node --version
+      - run: docker --version
      

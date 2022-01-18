@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/ubuntu:20.04
+    steps:
+      - checkout
+      - run: ls -la
+      - run: env

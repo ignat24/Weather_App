@@ -23,7 +23,7 @@ jobs:
       - image: cimg/base:2020.01
     steps:
     - checkout
-    - run: pip install --upgrade pip
+    - run:  sudo apt-get -y install pip 
 # workflows:
 
 #   test-deploy:

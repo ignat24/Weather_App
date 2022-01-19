@@ -11,7 +11,7 @@ workflows:
           aws-access-key-id: AWS_ACCESS_KEY
           aws-secret-access-key: AWS_SECRET_KEY
           create-repo: false
-          dockerfile: Dockerfile
+          dockerfile: ../Dockerfile
           path: ../
           region: AWS_REGION
           repo: circleci

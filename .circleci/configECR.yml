@@ -16,6 +16,3 @@ workflows:
           region: AWS_REGION
           repo: circleci
           tag: "$CIRCLE_SHA1"
-
-
-     

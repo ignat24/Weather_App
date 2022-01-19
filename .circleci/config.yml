@@ -17,9 +17,15 @@ jobs:
       - run:
           name: Docker login
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      # - run:
+      #     name: Docker build
+      #     command: docker build -t 242131/circle-ci:$CIRCLE_BUILD_NUM .
+      # - run:
+      #     name: Docker push
+      #     command: docker push 242131/circle-ci:$CIRCLE_BUILD_NUM
       - run:
           name: Docker build
-          command: docker build -t 242131/circle-ci:$CIRCLE_BUILD_NUM .
+          command: docker build -t 242131/circle-ci:test .
       - run:
           name: Docker push
-          command: docker push 242131/circle-ci:$CIRCLE_BUILD_NUM
+          command: docker push 242131/circle-ci:test

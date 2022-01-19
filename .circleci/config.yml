@@ -1,12 +1,11 @@
 version: 2.1
 
 orbs:
-  aws-ecr: circleci/aws-ecr@6.7.0
+  aws-ecr: circleci/aws-ecr@7.3.0
 
 workflows:
   build_and_push_image:
     jobs:
-      - install
       - aws-ecr/build-and-push-image:
           account-url: AWS_ACCOUNT_URL
           aws-access-key-id: AWS_ACCESS_KEY
@@ -17,13 +16,13 @@ workflows:
           region: AWS_REGION
           repo: circleci
           tag: "$CIRCLE_SHA1"
-jobs:
-  install:
-    docker:
-      - image: cimg/base:2020.01
-    steps:
-    - checkout
-    - run:  sudo apt-get -y install pip 
+# jobs:
+#   install:
+#     docker:
+#       - image: cimg/base:2020.01
+#     steps:
+#     - checkout
+#     - run:  sudo apt-get -y install pip 
 # workflows:
 
 #   test-deploy:

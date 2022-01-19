@@ -11,5 +11,11 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - checkout
-      - run: docker --version
+      - setup_remote_docker
+      - run: 
+          name: Docker version
+          command: docker --version
+      - run:
+          name: Docker login
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
      
